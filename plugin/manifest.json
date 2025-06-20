@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Sentiment Analysis",
+  "name": "TubePulse",
   "version": "1.0",
   "description": "Analyzes YouTube video comments for sentiment.",
   "action": {
