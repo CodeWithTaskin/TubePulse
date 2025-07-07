@@ -1,0 +1,20 @@
+azure-core
+azure-identity
+azure-storage-blob
+ipykernel
+pandas
+numpy
+matplotlib
+plotly
+seaborn
+scikit-learn
+pymongo
+from_root
+certifi
+PyYAML
+Flask
+python-multipart
+waitress
+jinja2
+imblearn
+-e .

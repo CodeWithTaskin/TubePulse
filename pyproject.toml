@@ -1,0 +1,11 @@
+[project]
+name = "src"
+version = "0.0.1"
+description = "TubePulse is an AI-driven system that analyzes YouTube comments in real time using NLP and ML to detect sentiment, flag toxicity, and identify emerging trends. It helps content creators, brands, and analysts transform raw audience feedback into actionable insights for smarter engagement."
+authors = [{name = "Farjhan Ahmed", email = "farjhanahmed@gmail.com"}]
+
+[tool.setuptools]
+packages = {find = {}}
+
+[tool.setuptools.dynamic]
+dependencies = {file = "requirements.txt"}
