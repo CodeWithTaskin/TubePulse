@@ -26,6 +26,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 credintials.txt
+prectice.ipynb
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
