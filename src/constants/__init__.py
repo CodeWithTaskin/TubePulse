@@ -11,7 +11,7 @@ BACKUP_COUNT = 3 #Number of backup log to keep
 # MongoDB configuration Constants
 DB_NAME: str = 'TubePulse'
 COLLECTION_NAME: str = 'TubePulse_Data'
-CONNECTION_URL: str = 'MONGO_DB_URL'
+CONNECTION_URL: str = 'MONGODB_URL'
 
 # Data Ingestion Constants starts from DATA_INGESTION_FOLDER_NAME variable
 DATA_INGESTION_FOLDER_NAME: str = 'Data_Ingestion'

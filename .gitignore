@@ -27,6 +27,8 @@ share/python-wheels/
 MANIFEST
 credintials.txt
 prectice.ipynb
+logs
+artefact
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

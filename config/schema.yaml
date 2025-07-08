@@ -1,0 +1,7 @@
+columns:
+  - "Unnamed: 0"
+  - Comment
+  - Sentiment
+
+unnecessary_col:
+  - _id

@@ -8,6 +8,7 @@ from src.exception import MyException
 class MongoDBConnection:
     def __init__(self, db_name: str, collection_name: str, connection_url: str):
         try:
+            logging.info('Connecting with MongoDB....')
             client = MongoClient(connection_url)
             status = client.admin.command('ping')
             if status['ok'] == 1:
