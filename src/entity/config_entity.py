@@ -20,3 +20,8 @@ class DataIngestionConfig:
     ingested_folder: Path = os.path.join(data_ingestion_folder, INGESTED_FOLDER_NAME)
     feature_store_file: Path = os.path.join(feature_store_folder, FEATURE_STORE_FILE_NAME)
     ingested_file = Path = os.path.join(ingested_folder, INGESTED_FILE_NAME)
+
+@dataclass
+class DataValidationConfig:
+    data_validation_folder: Path = os.path.join(pipeline_config.artifact_dir, DATA_VALIDATION_FOLDER_NAME)
+    report_file: Path = os.path.join(data_validation_folder, REPORT_FILE_NAME)

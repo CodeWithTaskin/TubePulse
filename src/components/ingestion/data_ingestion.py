@@ -63,13 +63,12 @@ class DataIngestion:
             
             if schema['unnecessary_col'][0] in df.columns:
                 df: pd.DataFrame = df.drop(columns=schema['unnecessary_col'])
-                df = df.reset_index(drop=True)
             
             ingestion_file_path: Path = Path(ingested_path)
             ingestion_file_path.parent.mkdir(parents=True, exist_ok=True)
             
             logging.info('Saving clean data into ingestion folder....')
-            df.to_csv(ingestion_file_path)
+            df.to_csv(ingestion_file_path, index=False)
             return ingestion_file_path
         
         except Exception as e:

@@ -20,5 +20,12 @@ FEATURE_STORE_FILE_NAME: str = 'data.csv'
 INGESTED_FOLDER_NAME: str = 'ingested'
 INGESTED_FILE_NAME: str = 'clean_data.csv'
 
+# Data Validation Constants starts from DATA_VALIDATION_FOLDER_NAME variable
+DATA_VALIDATION_FOLDER_NAME: str = 'Data_Validation'
+REPORT_FILE_NAME: str = 'report.json'
+
+
+
+
 
 
