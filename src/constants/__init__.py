@@ -24,6 +24,12 @@ INGESTED_FILE_NAME: str = 'clean_data.csv'
 DATA_VALIDATION_FOLDER_NAME: str = 'Data_Validation'
 REPORT_FILE_NAME: str = 'report.json'
 
+# Data Transformation Constants starts from MAX_FEATURES variable
+DATA_TRANSFORMATION_FOLDER_NAME: str = 'Data_Transformation'
+TRAIN_ARR_FILE_NAME: str = 'train.npy.gz'
+TEST_ARR_FILE_NAME: str = 'test.npy.gz'
+TEST_SIZE: float = 0.2
+MAX_FEATURES: int = 5000
 
 
 

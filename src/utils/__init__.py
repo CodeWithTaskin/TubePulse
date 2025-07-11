@@ -1,7 +1,9 @@
 import os
 import sys
 import yaml
+import gzip
 import json
+import numpy as np
 
 from pathlib import Path
 from src.logging import logging
@@ -32,5 +34,19 @@ def ultra_json(path: Path, data: json = None, statement: str = 'load') -> json:
         
         else:
             raise logging.info('Invalid Statement....')
+    except Exception as e:
+        raise MyException(e, sys) from e
+    
+def save_and_load_np_array(path: Path, arr: np.array = None, statement = 'load') -> np.array:
+    try:
+        if statement == 'save':
+            with gzip.GzipFile(path, "w") as f:
+                np.save(f, arr)
+        elif statement == 'load':
+            with gzip.GzipFile(path, "r") as f:
+                loaded_data = np.load(f, allow_pickle=True)
+            return loaded_data
+        else:
+            logging.info('Invalid statement....')
     except Exception as e:
         raise MyException(e, sys) from e

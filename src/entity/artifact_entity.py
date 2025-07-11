@@ -8,3 +8,8 @@ class DataIngestionArtifact:
 @dataclass
 class DataValidationArtifact:
     report_file_path: Path
+    
+@dataclass
+class DataTransformationArtifact:
+    train_arr_file_path: Path
+    test_arr_file_path: Path
