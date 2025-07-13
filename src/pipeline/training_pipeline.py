@@ -1,18 +1,21 @@
 from src.components.ingestion.data_ingestion import DataIngestion
 from src.components.validation.data_validation import DataValidation
 from src.components.preprocessing.data_transformation import DataTransformation
+from src.components.model.model_bulding import ModelBuilder
 
 
 from src.entity.config_entity import (
     DataIngestionConfig,
     DataValidationConfig,
-    DataTransformationConfig
+    DataTransformationConfig,
+    ModelBuildConfig
 )
 
 from src.entity.artifact_entity import (
     DataIngestionArtifact,
     DataValidationArtifact,
-    DataTransformationArtifact
+    DataTransformationArtifact,
+    ModelBuilderArtifact
 )
 
 
@@ -21,6 +24,7 @@ class Pipeline:
         self.data_ingestion_config: DataIngestionConfig = DataIngestionConfig()
         self.data_validation_config: DataValidationConfig = DataValidationConfig()
         self.data_transformation_config: DataTransformationConfig = DataTransformationConfig()
+        self.model_builder_config: ModelBuildConfig = ModelBuildConfig()
     
     def start_data_ingestion(self) -> DataIngestionArtifact:
         data_ingestion: DataIngestion = DataIngestion()
@@ -57,6 +61,22 @@ class Pipeline:
         )
         
         return data_transformation_initialize
+    
+    def start_model_building(
+        self,
+        train_df: DataTransformationArtifact,
+        test_df: DataTransformationArtifact
+    ) -> ModelBuilderArtifact:
+        model_builder: ModelBuilder = ModelBuilder()
+
+        model_builder_initialize = model_builder.model_builder_initialize(
+            train_df=train_df,
+            test_df=test_df,
+            model_file=self.model_builder_config.model_file,
+            matrix_file=self.model_builder_config.matrix_file
+        )
+
+        return model_builder_initialize
         
     
     def run_pipeline(self):
@@ -68,4 +88,9 @@ class Pipeline:
         data_transformation_artifact: DataTransformationArtifact = self.start_data_transformation(
             ingested_file=data_ingestion_artifact.ingestion_file,
             validation_report=data_validation_artifact.report_file_path
+        )
+
+        model_builder_artifact: ModelBuilderArtifact = self.start_model_building(
+            train_df=data_transformation_artifact.train_arr_file_path,
+            test_df=data_transformation_artifact.test_arr_file_path
         )

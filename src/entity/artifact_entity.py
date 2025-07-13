@@ -13,3 +13,8 @@ class DataValidationArtifact:
 class DataTransformationArtifact:
     train_arr_file_path: Path
     test_arr_file_path: Path
+
+@dataclass
+class ModelBuilderArtifact:
+    model_file: Path
+    matrix_file: Path

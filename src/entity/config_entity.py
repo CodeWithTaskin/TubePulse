@@ -31,3 +31,11 @@ class DataTransformationConfig:
     data_transformation_folder: Path = os.path.join(pipeline_config.artifact_dir, DATA_TRANSFORMATION_FOLDER_NAME)
     train_arr_file_path: Path = os.path.join(data_transformation_folder, TRAIN_ARR_FILE_NAME)
     test_arr_file_path: Path = os.path.join(data_transformation_folder, TEST_ARR_FILE_NAME)
+
+@dataclass
+class ModelBuildConfig:
+    model_builder_folder: Path = os.path.join(pipeline_config.artifact_dir, MODEL_BUILDER_FOLDER_NAME)
+    model_folder: Path = os.path.join(model_builder_folder, MODEL_FOLDER_NAME)
+    model_file: Path = os.path.join(model_folder, MODEL_FILE_NAME)
+    matrix_folder: Path = os.path.join(model_builder_folder, MATRIX_FOLDER_NAME)
+    matrix_file: Path = os.path.join(matrix_folder, MATRIX_FILE_NAME)

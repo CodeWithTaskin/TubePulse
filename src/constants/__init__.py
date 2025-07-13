@@ -31,6 +31,13 @@ TEST_ARR_FILE_NAME: str = 'test.npy.gz'
 TEST_SIZE: float = 0.2
 MAX_FEATURES: int = 5000
 
+# Model Building Constants starts from MODEL_FOLDER_NAME variable
+MODEL_BUILDER_FOLDER_NAME: str = 'Model_Builder'
+MODEL_FOLDER_NAME: str = 'Model'
+MODEL_FILE_NAME: str = 'model.pkl'
+MATRIX_FOLDER_NAME: str = 'Matrix'
+MATRIX_FILE_NAME: str = 'matrix.json'
+
 
 
 
