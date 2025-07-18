@@ -1,0 +1,219 @@
+:root {
+  --primary: #e50914;
+  --primary-light: #ff5252;
+  --dark: #0a0a0a;
+  --medium: #1a1a1a;
+  --light: #f5f5f5;
+  --gray: #cccccc;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --gradient: linear-gradient(135deg, #e50914, #b81d24);
+  --gradient-matrix: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark);
+  color: var(--light);
+  font-family: 'Lato', sans-serif;
+  padding: 15px;
+  width: 380px;
+  max-height: 600px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo i {
+  font-size: 1.2em;
+}
+
+.section {
+  margin-bottom: 20px;
+  background: rgba(30, 30, 30, 0.8);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: var(--card-shadow);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.5s forwards;
+  transition: var(--transition);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(229, 9, 20, 0.25);
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+.section:nth-child(5) { animation-delay: 0.5s; }
+
+.section-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(229, 9, 20, 0.5);
+}
+
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.metric {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.metric:hover {
+  background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+  transform: translateY(-3px);
+}
+
+.metric-title {
+  font-size: 13px;
+  color: #cccccc;
+  margin-bottom: 5px;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: 800;
+  background: var(--gradient-matrix);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chart-container, .wordcloud-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.chart-container img, .wordcloud-container img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.chart-container img:hover, .wordcloud-container img:hover {
+  transform: scale(1.03);
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.comment-item {
+  margin: 10px 0;
+  padding: 12px;
+  background: linear-gradient(to right, #2a2a2a, #1a1a1a);
+  border-radius: 8px;
+  transition: var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.comment-item:hover {
+  transform: translateX(5px);
+  border-left: 3px solid var(--primary);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.comment-sentiment {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.sentiment-positive { background: linear-gradient(to right, #00c853, #64dd17); }
+.sentiment-neutral { background: linear-gradient(to right, #2979ff, #2962ff); }
+.sentiment-negative { background: linear-gradient(to right, #ff1744, #f50057); }
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+.loader-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-message {
+  padding: 10px;
+  text-align: center;
+  background: rgba(229, 9, 20, 0.1);
+  border-radius: 8px;
+  margin: 10px 0;
+  border-left: 3px solid var(--primary);
+}
