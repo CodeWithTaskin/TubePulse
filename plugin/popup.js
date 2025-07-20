@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
   `;
 
-  const API_KEY = 'AIzaSyCt79gbhj58XUmDEpKTUEVi3E75e13Pe18'; // Replace with your YouTube API key
-  const API_URL = 'https://tube-pluse-api-latest.onrender.com'; // Replace with your backend URL
+  const API_KEY = 'key'; // Replace with your YouTube API key
+  const API_URL = 'url'; // Replace with your backend URL
 
   chrome.tabs.query({ active: true, currentWindow: true }, async tabs => {
     const url = tabs[0].url;
