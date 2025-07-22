@@ -53,10 +53,10 @@ https://github.com/user-attachments/assets/da273429-f3af-4f8b-bc7f-a5f74b0a7566
 
 | Feature | Description | Visualization |
 |---------|-------------|--------------|
-| **Sentiment Analysis** | Real-time classification of comments into Positive/Negative/Neutral | <img src="https://via.placeholder.com/300x150/0f3460/ffffff?text=Pie+Chart" width="200"> |
-| **Word Cloud** | Visual representation of most frequent words | <img src="https://via.placeholder.com/300x150/0f3460/ffffff?text=Word+Cloud" width="200"> |
-| **Top Comments** | Curated list of most impactful comments | <img src="https://via.placeholder.com/300x150/0f3460/ffffff?text=Top+Comments" width="200"> |
-| **Automated Pipeline** | End-to-end MLOps workflow | <img src="https://via.placeholder.com/300x150/0f3460/ffffff?text=MLOps" width="200"> |
+| **Sentiment Analysis** | Real-time classification of comments into Positive/Negative/Neutral | <img src="https://github.com/CodeWithTaskin/TubePulse/blob/main/asset/Screenshot_1.png?raw=true" width="200"> |
+| **Word Cloud** | Visual representation of most frequent words | <img src="https://github.com/CodeWithTaskin/TubePulse/blob/main/asset/Screenshot_2.png?raw=true" width="200"> |
+
+
 
 ## 🚀 How It Works
 
@@ -138,12 +138,12 @@ graph LR
 
 ### Browser Extension
 Available on Firefox Addons Marketplace:  
-[![Get TubePluse on Firefox](https://via.placeholder.com/200x60/FF7139/ffffff?text=Download+for+Firefox)](https://addons.mozilla.org/)
+[![Get TubePluse on Firefox](https://img.shields.io/badge/Firefox_Addons-FF7139?logo=firefoxbrowser&logoColor=white)](https://addons.mozilla.org/en-US/firefox/addon/tubepluse/)
 
 ### Local Development
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/tubepluse.git
+git clone https://github.com/CodeWithTaskin/TubePulse.git
 cd tubepluse
 
 # Set up virtual environment
@@ -154,8 +154,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # Run backend server
-cd backend
-python app.py
+python run.py
 
 # Load extension in browser
 1. Enable developer mode in browser
@@ -178,9 +177,8 @@ graph TB
 ## 📊 Results Visualization
 
 <div align="center">
-  <img src="https://via.placeholder.com/400x300/1a1a2e/ffffff?text=Sentiment+Pie+Chart" alt="Pie Chart" width="30%">
-  <img src="https://via.placeholder.com/400x300/16213e/ffffff?text=Comment+Word+Cloud" alt="Word Cloud" width="30%">
-  <img src="https://via.placeholder.com/400x300/0f3460/ffffff?text=Top+Comments" alt="Top Comments" width="30%">
+  <img src="https://github.com/CodeWithTaskin/TubePulse/blob/main/asset/Screenshot_1.png?raw=true" alt="Pie Chart" width="30%">
+  <img src="https://github.com/CodeWithTaskin/TubePulse/blob/main/asset/Screenshot_2.png?raw=true" alt="Word Cloud" width="30%">
 </div>
 
 ## 🤝 Contributing
@@ -199,6 +197,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Project Lead: [Your Name](mailto:your.email@example.com)  
-[![GitHub Issues](https://img.shields.io/github/issues/yourusername/tubepluse)](https://github.com/yourusername/tubepluse/issues)
+Project Lead: [Farjhan Ahmed](mailto:your.email@example.com)  
+[![GitHub Issues](https://img.shields.io/github/issues/CodeWithTaskin/tubepluse)](https://github.com/CodeWithTaskin/TubePulse/issues)
 
